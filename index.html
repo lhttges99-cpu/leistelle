@@ -7,87 +7,87 @@
   <style>
     :root {
       /* Theme */
-      --bg: #0b1a2b;
-      --bg-2: #112233;
-      --card: #1a2a3f;
-      --card-2: #243a5a;
-      --text: #ffffff;
-      --muted: #a8c0e0;
-      --border: #3e5a7f;
-      --accent: #4ea6ff;
-      --shadow: 0 16px 28px rgba(0,0,0,.45);
+      --bg: #1e2a3d;
+      --bg-2: #22354f;
+      --card: #243a5a;
+      --card-2: #2a466e;
+      --text: #eef3ff;
+      --muted: #c7d6f3;
+      --border: #4e6fa3;
+      --accent: #3ea6ff;
+      --shadow: 0 16px 28px rgba(0,0,0,.35);
       --radius: 12px;
 
       /* Table & density */
-      --cell-pad: 10px;
-      --cell-pad-lg: 12px;
-      --gap: 12px;
-      --font: 14px;
-      --font-sm: 13px;
-      --line: 1.5;
+      --cell-pad: 12px;
+      --cell-pad-lg: 14px;
+      --gap: 14px;
+      --font: 15px;
+      --font-sm: 14px;
+      --line: 1.55;
 
       /* Row colors */
-      --row: #152230;
-      --row-alt: #0f1a28;
-      --head: #1e3a5d;
+      --row: #203656;
+      --row-alt: #1c2f4a;
+      --head: #284b7b;
 
       /* Status colors */
-      --green: #1f8b4c;   /* Code 01 */
-      --red:   #c73e3e;   /* 10-78, Code 99, Großeinsatz */
-      --blue:  #2e6bbf;   /* Übung */
-      --yellow:#d6a32e;   /* Code 04 */
-      --teal:  #1e8e8e;   /* Code 02/03 */
-      --gray:  #5c6a7f;   /* Code 05/06 */
+      --green: #13a063;   /* Code 01 */
+      --red:   #d04a4a;   /* 10-78, Code 99, Großeinsatz */
+      --blue:  #3d8bfd;   /* Übung */
+      --yellow:#ffc857;   /* Code 04 */
+      --teal:  #22b7b7;   /* Code 02/03 */
+      --gray:  #7a8fa6;   /* Code 05/06 */
 
       /* Top tiles */
-      --tile: #1c2e44;
-      --tile-border: #3a5e7f;
+      --tile: #203c66;
+      --tile-border: #355c93;
     }
     * { box-sizing: border-box; }
     html, body { height: 100%; }
     body {
       font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
-      background: var(--bg);
+      background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
       color: var(--text);
       margin: 0; line-height: var(--line);
       -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
     }
 
-    .container { padding: 18px; max-width: 1280px; margin: 0 auto; }
+    .container { padding: 18px; max-width: 1680px; margin: 0 auto; }
 
     /* Mast */
     .mast { background: var(--card-2); border: 1px solid var(--tile-border); border-radius: var(--radius);
-            padding: 16px; display:flex; align-items:center; justify-content:center; box-shadow: var(--shadow); }
-    .mast h1 { margin:0; letter-spacing:.6px; font-size: 30px; font-weight: 800; }
+            padding: 14px 20px; display:flex; align-items:center; justify-content:center; box-shadow: var(--shadow); }
+    .mast h1 { margin:0; letter-spacing:.6px; font-size: 28px; font-weight: 800; }
 
     /* Top grid cards */
-    .top-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); margin: var(--gap) 0; }
-    .tile { background: var(--tile); border: 1px solid var(--tile-border); border-radius: var(--radius); padding: 14px; box-shadow: var(--shadow); }
-    .tile h3 { margin: 0 0 10px; font-size: 16px; color: var(--muted); letter-spacing:.2px; font-weight:600; }
+    .top-grid { display: grid; grid-template-columns: 1.3fr 1.1fr 1.6fr 1.2fr; gap: var(--gap); margin: var(--gap) 0; }
+    .tile { background: var(--tile); border: 1px solid var(--tile-border); border-radius: var(--radius); padding: 12px; box-shadow: var(--shadow); }
+    .tile h3 { margin: 0 0 10px; font-size: 14px; color: var(--muted); letter-spacing:.2px; font-weight:600; }
 
-    .code-big { background: linear-gradient(180deg, #1f8b4c 0%, #166b3c 100%); border:1px solid #145c34; text-align:center; padding: 16px; border-radius: 10px;
-                font-size: 24px; font-weight: 900; letter-spacing: .8px; }
+    .code-big { background: linear-gradient(180deg, #168a4f 0%, #0d6c3d 100%); border:1px solid #0e5e34; text-align:center; padding: 14px; border-radius: 10px;
+                font-size: 22px; font-weight: 900; letter-spacing: .8px; }
 
-    .mini-grid { display:grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .mini { background: #1c2e44; border: 1px solid #3a5e7f; border-radius: 10px; padding: 12px; display:grid; grid-template-columns: 130px 1fr; gap:12px; align-items:center; }
-    .mini label { font-size: 14px; color: var(--muted); }
+    .mini-grid { display:grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .mini { background: #1f365c; border: 1px solid #355c93; border-radius: 10px; padding: 10px; display:grid; grid-template-columns: 130px 1fr; gap:10px; align-items:center; }
+    .mini label { font-size: 13px; color: var(--muted); }
 
     select.select-dark { width:100%; padding: 10px; background:#173053; color:#fff; border:1px solid #355c93; border-radius: 12px; }
-    .dn-name { margin-top:6px; font-size: 14px; color:#77e6b3; min-height: 1.2em; }
+    .dn-name { margin-top:6px; font-size: 13px; color:#77e6b3; min-height: 1.2em; }
 
-    .legend-top { display:grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-    .legend-top .row { background:#1c2e44; border:1px solid #3a5e7f; border-radius: 10px; padding: 12px; font-size: 14px; color:#e3eeff; }
+    .legend-top { display:grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+    .legend-top .row { background:#1f365c; border:1px solid #355c93; border-radius: 10px; padding: 10px; font-size: 13px; color:#e3eeff; }
 
     /* Table area */
-    .table-wrap { background: var(--card); border:1px solid var(--tile-border); border-radius: var(--radius); padding: 16px; box-shadow: var(--shadow); overflow-x:auto; }
-    .table-title { font-size: 15px; color: var(--muted); margin: 4px 0 12px; }
+    .table-wrap { background: var(--card); border:1px solid var(--tile-border); border-radius: var(--radius); padding: 14px; box-shadow: var(--shadow); overflow-x:auto; }
+    .table-title { font-size: 14px; color: var(--muted); margin: 4px 0 12px; }
 
-    table { width:100%; border-collapse:collapse; table-layout:auto; }
-    col.status { width: 140px; }
-    col.streifen { width: 180px; }
-    col.funk { width: 120px; }
-    col.dn { width: 140px; }
-    col.name { width: 200px; }
+    table { width:100%; border-collapse:collapse; table-layout:fixed; }
+    col.status { width: 160px; }
+    col.streifen { width: 220px; }
+    col.funk { width: 130px; }
+    col.dn { width: 150px; }
+    col.name { width: 260px; }
 
     thead th { position: sticky; top: 0; z-index: 2; background: var(--head); color:#fff; }
     th, td { border:1px solid var(--border); padding: var(--cell-pad-lg); text-align:center; }
@@ -103,37 +103,37 @@
     select:focus { outline: 2px solid var(--accent); box-shadow: 0 0 0 3px rgba(62,166,255,.25); }
 
     td.cell-streifen { text-align:left; font-weight: 700; letter-spacing: .2px; color: #eaf2ff; }
-    .name-display { color:#77e6b3; font-size: 16px; min-height:1.6em; display:flex; align-items:center; justify-content:center; font-weight: 600; }
+    .name-display { color:#77e6b3; font-size: 15px; min-height:1.6em; display:flex; align-items:center; justify-content:center; font-weight: 600; }
 
-    .section-row td { background: #213b62; color:#fff; font-weight:800; text-align:left; padding: 14px; border-color:#213b62; }
+    .section-row td { background: #213b62; color:#fff; font-weight:800; text-align:left; padding: 12px; border-color:#213b62; }
     tr.row-gold td { background:#65450f; }
     tr.row-red td  { background:#5a1111; }
-    tr.note-row td { font-size: 14px; color:#d6e2ff; background:#1a3053; text-align:left; padding: 12px 14px; border-color:#355c93; }
+    tr.note-row td { font-size: 13px; color:#d6e2ff; background:#1a3053; text-align:left; padding: 10px 12px; border-color:#355c93; }
 
     select.status { transition: background-color .2s ease, box-shadow .2s ease; border-radius: 999px; padding: 8px 12px; }
     select.funk   { transition: background-color .2s ease, box-shadow .2s ease; border-radius: 12px; }
 
-    .legend { display:flex; flex-wrap:wrap; gap: 12px; margin-top: 16px; color: var(--muted); font-size: 14px; }
+    .legend { display:flex; flex-wrap:wrap; gap: 12px; margin-top: 14px; color: var(--muted); font-size: 14px; }
     .dot { display:inline-block; width:12px; height:12px; border-radius:50%; margin-right:6px; vertical-align:middle; }
 
     /* Roster */
-    .roster { margin-top: 20px; background: var(--card); border:1px solid var(--tile-border); border-radius: var(--radius); padding: 16px; box-shadow: var(--shadow); }
-    .roster h3 { margin:0 0 16px; color:#e3eeff; }
-    .roster table { table-layout: auto; }
+    .roster { margin-top: 16px; background: var(--card); border:1px solid var(--tile-border); border-radius: var(--radius); padding: 14px; box-shadow: var(--shadow); }
+    .roster h3 { margin:0 0 12px; color:#e3eeff; }
+    .roster table { table-layout: fixed; }
     .roster col.status { width: 140px; }
-    .roster col.base { width: 160px; }
+    .roster col.base { width: 180px; }
     .roster col.funk { width: 120px; }
     .roster col.dn { width: 140px; }
     .roster col.name { width: auto; }
 
     /* Density toggle */
-    .toolbar { display:flex; flex-wrap:wrap; gap: var(--gap); align-items:center; background: var(--card); padding: 14px; border-radius: var(--radius); margin: var(--gap) 0; box-shadow: var(--shadow); }
+    .toolbar { display:flex; flex-wrap:wrap; gap: var(--gap); align-items:center; background: var(--card); padding: 12px; border-radius: var(--radius); margin: var(--gap) 0; box-shadow: var(--shadow); }
     .toolbar .group { display:flex; gap: 12px; align-items:center; }
     .toolbar label { font-size: 14px; color: var(--muted); }
-    .toolbar select { width: auto; min-width: 160px; }
+    .toolbar select { width: auto; min-width: 180px; }
 
     /* Footer */
-    .footer { margin: 20px auto 10px; text-align: center; color: var(--muted); font-size: 14px; opacity: .9; }
+    .footer { margin: 18px auto 8px; text-align: center; color: var(--muted); font-size: 13px; opacity: .9; }
   </style>
 </head>
 <body>
@@ -161,6 +161,39 @@
             <select class="select-dark dienstnummer" data-row="-1" data-field="ls2"></select>
             <div class="dn-name" id="ls2name">UNBESETZT</div>
           </div>
+        </div>
+      </div>
+      <div class="tile">
+        <h3>Streifenordnung</h3>
+        <div class="legend-top">
+          <div class="row">Lincoln → 1 Person (mit Erlaubnis)</div>
+          <div class="row">Streifen → 2–3 Personen</div>
+          <div class="row">Mary → Motorradeinheit</div>
+          <div class="row">David → S.W.A.T.</div>
+          <div class="row">Eagle → Overwatch (Heli)</div>
+          <div class="row">Patrol → Highway Patrol</div>
+          <div class="row">Gold → Supervisor/Leitungsaufgaben</div>
+          <div class="row">Moby → Bootseinheit</div>
+        </div>
+      </div>
+      <div class="tile">
+        <h3>Ansicht & Filter</h3>
+        <div class="mini-grid">
+          <label class="mini" style="grid-template-columns:auto 1fr"><input type="checkbox" id="filter-besetzt" style="margin-right:8px"> Nur besetzte Zeilen</label>
+          <label class="mini" style="grid-template-columns:auto 1fr"><input type="checkbox" class="group-filter" data-group="streife" checked style="margin-right:8px"> Streifen</label>
+          <label class="mini" style="grid-template-columns:auto 1fr"><input type="checkbox" class="group-filter" data-group="lincoln" checked style="margin-right:8px"> Lincoln</label>
+          <label class="mini" style="grid-template-columns:auto 1fr"><input type="checkbox" class="group-filter" data-group="goldred" checked style="margin-right:8px"> Gold & Red</label>
+          <label class="mini" style="grid-template-columns:auto 1fr"><input type="checkbox" class="group-filter" data-group="aviation" checked style="margin-right:8px"> Eagle</label>
+          <label class="mini" style="grid-template-columns:auto 1fr"><input type="checkbox" class="group-filter" data-group="bambi" checked style="margin-right:8px"> Bambi</label>
+          <label class="mini" style="grid-template-columns:auto 1fr"><input type="checkbox" class="group-filter" data-group="dtu" checked style="margin-right:8px"> DTU</label>
+          <label class="mini" style="grid-template-columns:auto 1fr"><input type="checkbox" class="group-filter" data-group="mary" checked style="margin-right:8px"> Mary</label>
+        </div>
+        <div style="margin-top:10px; display:flex; gap:10px; align-items:center">
+          <label style="color:var(--muted); font-size:13px">Darstellung:</label>
+          <select id="density-select" class="select-dark" style="max-width:220px">
+            <option value="komfort">Komfort (mehr Platz)</option>
+            <option value="kompakt">Kompakt</option>
+          </select>
         </div>
       </div>
     </div>
@@ -228,13 +261,161 @@
   </div>
 
   <script>
-    const API_BASE = '.';
+    // ==== Konfiguration ====
+    const API_BASE = 'api';
     const STORAGE_KEY = 'leitstelle_state_v2';
-    const POLL_MS = 2000;
+    const POLL_MS = 5000;
 
-    async function init(){
-      // (keine Änderungen an der Logik, nur CSS/UI angepasst)
+    // Dienstnummern vorbereiten
+    const dienstnummerToName = {};
+    function addRange(prefix, start, end) { for (let i=start;i<=end;i++){ const code=`${prefix}-${String(i).padStart(2,'0')}`; dienstnummerToName[code]=''; } }
+    dienstnummerToName['PD-00']=''; addRange('PD',1,148); addRange('PA',50,100);
+
+    Object.assign(dienstnummerToName, {
+      'PD-01':'Lukas Lutz','PD-02':'Alev Sunal','PD-03':'Pau Sunal','PD-04':'Peter Klumb','PD-05':'Steve McGarret',
+      'PD-09':'Tayo Backa','PD-16':'Walter Waldmeister','PD-17':'Morata Soler','PD-18':'Ben Morisson',
+      'PD-21':'Jule Waldmeister','PD-22':'Blaze Redman','PD-23':'Vito Ramirez','PD-24':'Zane Blackwood','PD-26':'Toni Deluca',
+      'PD-29':'Daniel Waldmeister','PD-34':'Andreas Hackl','PD-35':'Anton Horvath','PD-40':'Felix Miller','PD-41':'Andreas Graham','PD-42':'Luke Dijk',
+      'PD-43':'Reiner Hirsch','PD-44':'Jackson Dayne','PD-45':'Max Koslowski','PD-46':'Ottmar Zittlau','PD-47':'Ian Miller','PD-48':'Panther Nova','PD-49':'Max Lockheed',
+      'PD-51':'Antonio Moretti','PD-52':'Leon Bauschke','PD-53':'Keystone Brown','PD-54':'David Baum','PD-56':'Jason Shaw','PD-57':'Harald Hernandez','PD-58':'Lucius Lich','PD-59':'Joey Reed',
+      'PD-61':'Ali Coban','PD-62':'Elina Thompson','PD-63':'Enrique Vegas','PD-64':'Alvaro Fenix','PD-65':'James Milwakee','PD-66':'Peter Maier','PD-67':'Sultan Can','PD-68':'Dario Ramirez',
+      'PD-69':'GESPERRT','PD-70':'Diego Santos','PD-71':'Nosa Holy','PD-72':'Lamar Kasim','PD-73':'Efe Voga','PD-74':'Beton Tapi','PD-75':'Joanna Smith','PD-77':'Tom Black','PD-78':'Michael Korczak','PD-99':'Cooper Burns',
+      'PA-51':'Albert Voss','PA-52':'Salva Sol','PA-53':'Ben Stein','PA-54':'Alejandro Rodriguez','PA-55':'Dominic White','PA-56':'Ludovico Greco','PA-57':'Nico Bublich','PA-60':'Connor DeRossi','PA-61':'Mehmet Akbulat',
+      'PA-62':'Roman Schlag','PA-66':'Eduardo Sanchez','PA-67':'Kerem Demir','PA-68':'Carl Lucas','PA-69':'Max Akbulat','PA-71':'Lukas Denzel','PA-72':'Lukas Rothe','PA-73':'Noah Schloter','PA-74':'Pascal Luke','PA-75':'Sarah Ramirez','PA-76':'Max Brechtelsbauer','PA-78':'Abusa Hanco','PA-79':'Michael Johnson'
+    });
+
+    function sortCodes(a,b){ const [pa,na]=a.split('-'),[pb,nb]=b.split('-'); if(pa!==pb){ if(pa==='PD')return -1; if(pb==='PD')return 1; return pa.localeCompare(pb);} return Number(na)-Number(nb); }
+    const allCodes = Object.keys(dienstnummerToName).sort(sortCodes);
+    function buildOptionsHTML(){ let html='<option value="">Unbesetzt</option>'; for(const code of allCodes) html+=`<option value="${code}">${code}</option>`; return html; }
+
+    const statusOptions = `
+      <option value="">Unbesetzt</option>
+      <option value="10-60">10-60</option><option value="10-80">10-80</option><option value="10-78">10-78</option>
+      <option value="Code 0">Code 0</option><option value="Code 01">Code 01</option><option value="Code 02">Code 02</option><option value="Code 03">Code 03</option>
+      <option value="Code 05">Code 05</option><option value="Code 06">Code 06</option><option value="Dispatch">Dispatch</option>
+      <option value="10-15 (Akten schn.)">10-15 (Akten schn.)</option><option value="10-19 (Rück. WA.)">10-19 (Rück. WA.)</option>
+      <option value="RAUB (BANK)">RAUB (BANK)</option><option value="RAUB (LADEN)">RAUB (LADEN)</option><option value="RAUB (JUWEL)">RAUB (JUWEL)</option>
+      <option value="RAUB (HUMANE LABS)">RAUB (HUMANE LABS)</option><option value="RAUB (YACHT)">RAUB (YACHT)</option>
+      <option value="Elverfahren (Gericht/DOJ)">Elverfahren (Gericht/DOJ)</option><option value="Grenzkontrolle">Grenzkontrolle</option><option value="Geiselnahme">Geiselnahme</option>
+      <option value="Großeinsatz">Großeinsatz</option><option value="Gefangenentransport">Gefangenentransport</option><option value="Termin">Termin</option>
+      <option value="MD">MD</option><option value="DoJ">DoJ</option><option value="Weißes Haus">Weißes Haus</option><option value="Justice Division">Justice Division</option>
+      <option value="DTU">DTU</option><option value="Ausbildung">Ausbildung</option><option value="SD">SD</option><option value="Bennys">Bennys</option>
+      <option value="Übung">Übung</option><option value="ATF">ATF</option><option value="10-99">10-99</option><option value="Besprechung">Besprechung</option>
+      <option value="Grenzbox 1">Grenzbox 1</option><option value="Grenzbox 2">Grenzbox 2</option><option value="Grenzbox 3">Grenzbox 3</option><option value="Grenzbox 4">Grenzbox 4</option><option value="Grenzbox 5">Grenzbox 5</option>
+      <option value="Grenz: Eingang">Grenz: Eingang</option><option value="Grenz: Ausgang">Grenz: Ausgang</option>
+      <option value="Abfangeinheit 1">Abfangeinheit 1</option><option value="Abfangeinheit 2">Abfangeinheit 2</option><option value="Abfangeinheit 3">Abfangeinheit 3</option><option value="Abfangeinheit 4">Abfangeinheit 4</option><option value="Abfangeinheit 5">Abfangeinheit 5</option>
+      <option value="Phoenix 1">Phoenix 1</option><option value="Phoenix 2">Phoenix 2</option><option value="Phoenix 3">Phoenix 3</option>
+      <option value="Frei für Streife">Frei für Streife</option><option value="Lobby">Lobby</option><option value="Code 04">Code 04</option><option value="Code 99">Code 99</option>`;
+
+    const funkOptions = `
+      <option value="">Funk auswählen</option>
+      <option value="1">1</option><option value="5.1">5.1</option><option value="6.1">6.1</option><option value="8.1">8.1</option><option value="9.1">9.1</option>
+      <option value="11">11</option><option value="12">12</option><option value="0">0</option><option value="2">2</option><option value="3">3</option>
+      <option value="4">4</option><option value="5">5</option><option value="5.3">5.3</option><option value="6">6</option>
+      <option value="6.2">6.2</option><option value="6.3">6.3</option><option value="6.4">6.4</option><option value="6.5">6.5</option>
+      <option value="6.6">6.6</option><option value="6.7">6.7</option><option value="6.8">6.8</option><option value="6.9">6.9</option>
+      <option value="7">7</option><option value="8">8</option><option value="8.5">8.5</option><option value="9">9</option>
+      <option value="9.2">9.2</option><option value="9.3">9.3</option><option value="9.5">9.5</option>
+      <option value="NoComs">NoComs</option><option value="only Phone">only Phone</option>`;
+
+    function personCells(disabled,rowIndex,fieldKey){ const sel=`<select class="dienstnummer" data-row="${rowIndex}" data-field="${fieldKey}" ${disabled?'disabled':''}>${buildOptionsHTML()}</select>`; const name=`<div class="name-display">Unbesetzt</div>`; return `<td>${sel}</td><td>${name}</td>`; }
+
+    function addSectionRow(tbody,label){ const tr=document.createElement('tr'); tr.className='section-row'; const td=document.createElement('td'); td.colSpan=11; td.innerHTML=`<div class="section-label">${label}</div>`; tr.appendChild(td); tbody.appendChild(tr); }
+    function addNoteRow(tbody,text){ const tr=document.createElement('tr'); tr.className='note-row'; const td=document.createElement('td'); td.colSpan=11; td.innerHTML=text; tr.appendChild(td); tbody.appendChild(tr); }
+    function addRow(tbody,label,rowIndex,single=false,rowClass='',group=''){ const cells=[
+      `<td><select class="status" data-row="${rowIndex}" data-field="status">${statusOptions}</select></td>`,
+      `<td class="cell-streifen">${label}</td>`,
+      `<td><select class="funk" data-row="${rowIndex}" data-field="funk">${funkOptions}</select></td>`,
+      personCells(false,rowIndex,'driver'),
+      personCells(single,rowIndex,'pax1'),
+      personCells(single,rowIndex,'pax2'),
+      personCells(single,rowIndex,'pax3')
+    ].join(''); const tr=document.createElement('tr'); if(rowClass) tr.className=rowClass; if(group) tr.dataset.group=group; tr.innerHTML=cells; tbody.appendChild(tr); }
+
+    // Zeilen-Definitionen
+    const rowDefs=[]; for(let i=1;i<=13;i++) rowDefs.push({label:`Streife ${i}`,single:false,cls:'',group:'streife'});
+    for(let i=1;i<=4;i++) rowDefs.push({label:`Lincoln ${i}`,single:true,cls:'',group:'lincoln'});
+    const notes=`Lincoln wird nur gefahren, wenn unter 10 aktive Officer im Dienst sind. Gleiches gilt für normale Streifen wenn leer. Außerdem sind Lincoln-Streifen erst ab Sergeant II gestattet. Ausnahmen erlaubt Team Blue & Team Red (Weisungskette beachten).`;
+    rowDefs.push({label:'Gold 1',single:false,cls:'row-gold',group:'goldred'}); rowDefs.push({label:'Gold 2',single:false,cls:'row-gold',group:'goldred'});
+    rowDefs.push({label:'Red 1',single:false,cls:'row-red',group:'goldred'});  rowDefs.push({label:'Red 2',single:false,cls:'row-red',group:'goldred'});
+    rowDefs.push({label:'Eagle-One',single:true,cls:'',group:'aviation'}); rowDefs.push({label:'Eagle-Two',single:true,cls:'',group:'aviation'}); rowDefs.push({label:'Eagle-Five',single:true,cls:'',group:'aviation'});
+    rowDefs.push({label:'Bambi 1',single:false,cls:'',group:'bambi'}); rowDefs.push({label:'Bambi 2',single:false,cls:'',group:'bambi'}); rowDefs.push({label:'Bambi 3',single:false,cls:'',group:'bambi'});
+    rowDefs.push({label:'S.W.A.T. Cobra',single:false,cls:'',group:'swat'}); rowDefs.push({label:'DTU 1',single:false,cls:'',group:'dtu'}); rowDefs.push({label:'DTU 2',single:false,cls:'',group:'dtu'});
+    rowDefs.push({label:'Mary 1',single:false,cls:'',group:'mary'}); rowDefs.push({label:'Mary 2',single:false,cls:'',group:'mary'});
+
+    // Rendering
+    const tbody=document.getElementById('rows'); addSectionRow(tbody,'Streifen'); rowDefs.slice(0,13).forEach((d,i)=>addRow(tbody,d.label,i,d.single,d.cls,d.group));
+    addSectionRow(tbody,'Lincoln (Solo)'); rowDefs.slice(13,17).forEach((d,i)=>addRow(tbody,d.label,13+i,d.single,d.cls,d.group)); addNoteRow(tbody,notes);
+    addSectionRow(tbody,'Einsatzgruppen'); let idx=17; rowDefs.slice(17,21).forEach((d,i)=>addRow(tbody,d.label,idx+i,d.single,d.cls,d.group));
+    idx=21; addSectionRow(tbody,'Aviation & Spezialeinheiten'); rowDefs.slice(21,24).forEach((d,i)=>addRow(tbody,d.label,idx+i,d.single,d.cls,d.group)); idx+=3;
+    rowDefs.slice(24,27).forEach((d,i)=>addRow(tbody,d.label,idx+i,d.single,d.cls,d.group)); idx+=3;
+    rowDefs.slice(27,28).forEach((d,i)=>addRow(tbody,d.label,idx+i,d.single,d.cls,d.group)); idx+=1;
+    rowDefs.slice(28,30).forEach((d,i)=>addRow(tbody,d.label,idx+i,d.single,d.cls,d.group)); idx+=2;
+    rowDefs.slice(30,32).forEach((d,i)=>addRow(tbody,d.label,idx+i,d.single,d.cls,d.group));
+
+    // Roster unten
+    const rosterBody=document.getElementById('rosterBody'); for(let i=0;i<10;i++){ const tr=document.createElement('tr'); tr.innerHTML=`
+      <td><select class="status" data-row="r${i}" data-field="r_status">${statusOptions}</select></td>
+      <td><select class="base" data-row="r${i}" data-field="r_base"><option value="">Vespucci PD</option><option>Mission Row PD</option><option>Sandy Shores SD</option><option>Paleto SD</option></select></td>
+      <td><select class="funk" data-row="r${i}" data-field="r_funk">${funkOptions}</select></td>
+      <td><select class="dienstnummer" data-row="r${i}" data-field="r_dn">${buildOptionsHTML()}</select></td>
+      <td><div class="name-display">Unbesetzt</div></td>`; rosterBody.appendChild(tr); }
+
+    // ===== Logik =====
+    function findNameTarget(sel){ let t=sel.parentElement.querySelector('.name-display, .dn-name'); if(t) return t; const nextTd=sel.parentElement.nextElementSibling; if(nextTd){ t=nextTd.querySelector('.name-display, .dn-name')||nextTd; } return t; }
+
+    function attachNameLogic(scope=document){
+      // Namen
+      scope.querySelectorAll('select.dienstnummer').forEach(sel=>{ function upd(){ const code=sel.value; const target=findNameTarget(sel); const n=code? (dienstnummerToName[code]??'') : ''; target.textContent = code ? (n && String(n).trim()? n : code) : 'Unbesetzt'; const r=sel.dataset.row,f=sel.dataset.field; if(r!==undefined) pushUpdate(r,f,code); updateTopOfficer(); } sel.addEventListener('change',upd); upd(); });
+
+      // Status-Farben
+      const cs=(v)=>getComputedStyle(document.documentElement).getPropertyValue(v).trim(); const statusColors={'Code 01':cs('--green'),'10-78':cs('--red'),'Code 99':cs('--red'),'Großeinsatz':cs('--red'),'Übung':cs('--blue'),'Code 05':cs('--gray'),'Code 06':cs('--gray'),'Code 03':cs('--teal'),'Code 02':cs('--teal'),'Code 04':cs('--yellow')};
+      scope.querySelectorAll('select.status').forEach(sel=>{ function apply(){ const col=statusColors[sel.value]||'#173053'; sel.style.backgroundColor=col; sel.style.color='#fff'; sel.style.boxShadow='0 0 0 2px rgba(255,255,255,.06) inset'; const r=sel.dataset.row,f=sel.dataset.field; if(r!==undefined) pushUpdate(r,f,sel.value);} sel.addEventListener('change',apply); apply(); });
+
+      // Funk-Farben
+      const funkColors={'1':'#4263eb','5.1':'#495057','6.1':'#845ef7','8.1':'#ffd8a8','9.1':'#e5992e','11':'#495057','12':'#ff922b','0':'#adb5bd','2':'#74c0fc','3':'#ffa8a8','4':'#8ce99a','5':'#868e96','5.3':'#495057','6':'#9775fa','6.2':'#bac8ff','6.3':'#bac8ff','6.4':'#bac8ff','6.5':'#bac8ff','6.6':'#bac8ff','6.7':'#bac8ff','6.8':'#bac8ff','6.9':'#bac8ff','7':'#ffd43b','8':'#868e96','8.5':'#f1c40f','9':'#a87132','9.2':'#a87132','9.3':'#a87132','9.5':'#a87132','NoComs':'#c82333','only Phone':'#c82333'};
+      scope.querySelectorAll('select.funk').forEach(sel=>{ function f(){ sel.style.backgroundColor=funkColors[sel.value]||'#173053'; sel.style.color='#fff'; const r=sel.dataset.row,fk=sel.dataset.field; if(r!==undefined) pushUpdate(r,fk,sel.value);} sel.addEventListener('change',f); f(); });
+
+      // Filter
+      const besetztChk=document.getElementById('filter-besetzt'); const groupChks=document.querySelectorAll('.group-filter'); function applyFilters(){ const onlyBusy=besetztChk?.checked; const enabled=new Set(); groupChks.forEach(c=>c.checked&&enabled.add(c.dataset.group)); document.querySelectorAll('#rows tr').forEach(tr=>{ if(tr.classList.contains('section-row')||tr.classList.contains('note-row')) return; const grp=tr.dataset.group||''; let show=enabled.has(grp)||grp===''; if(show && onlyBusy){ const sr=tr.querySelector('select.status'); if(!sr) return; const idx=sr.dataset.row; const st=(getLocalState()||blankState()).rows[idx]||{}; const busy=!!(st.driver||st.pax1||st.pax2||st.pax3); show=busy; } tr.style.display=show?'':'none'; }); } besetztChk?.addEventListener('change',applyFilters); groupChks.forEach(c=>c.addEventListener('change',applyFilters)); applyFilters();
+
+      // Density toggle
+      const densitySel=document.getElementById('density-select'); function applyDensity(){ const v=densitySel?.value||'komfort'; const r=document.documentElement.style; if(v==='kompakt'){ r.setProperty('--cell-pad', '8px'); r.setProperty('--cell-pad-lg', '10px'); r.setProperty('--font', '14px'); r.setProperty('--line','1.45'); } else { r.setProperty('--cell-pad', '12px'); r.setProperty('--cell-pad-lg', '14px'); r.setProperty('--font', '15px'); r.setProperty('--line','1.55'); } } densitySel?.addEventListener('change', applyDensity); applyDensity();
     }
+
+    // Zustand
+    function blankState(){ const rowsCount=document.querySelectorAll('#rows tr').length - document.querySelectorAll('#rows .section-row, #rows .note-row').length; return { lastUpdated: Date.now(), rows:Array.from({length:rowsCount}).map(()=>({ status:'', funk:'', driver:'', pax1:'', pax2:'', pax3:'' })), ls1:'', ls2:'', r:Array.from({length:10}).map(()=>({})) }; }
+    function applyState(state){ const setSel=(q,v)=>{ const el=document.querySelector(q); if(!el) return; el.value=v||''; el.dispatchEvent(new Event('change')); }; (state.rows||[]).forEach((r,idx)=>{ setSel(`select.status[data-row="${idx}"]`, r.status); setSel(`select.funk[data-row="${idx}"]`, r.funk); setSel(`select.dienstnummer[data-row="${idx}"][data-field="driver"]`, r.driver); setSel(`select.dienstnummer[data-row="${idx}"][data-field="pax1"]`, r.pax1); setSel(`select.dienstnummer[data-row="${idx}"][data-field="pax2"]`, r.pax2); setSel(`select.dienstnummer[data-row="${idx}"][data-field="pax3"]`, r.pax3); }); setSel(`select.dienstnummer[data-field="ls1"]`, state.ls1); setSel(`select.dienstnummer[data-field="ls2"]`, state.ls2); (state.r||[]).forEach((row,i)=>{ setSel(`.roster select.status[data-row="r${i}"]`, row.status); setSel(`.roster select.funk[data-row="r${i}"]`, row.funk); setSel(`.roster select.dienstnummer[data-row="r${i}"][data-field="r_dn"]`, row.dn); }); updateTopOfficer(); }
+
+    function getLocalState(){ try{return JSON.parse(localStorage.getItem(STORAGE_KEY))||null}catch{return null} }
+    function setLocalState(st){ try{localStorage.setItem(STORAGE_KEY, JSON.stringify(st))}catch{} }
+    async function fetchServerState(){ try{ const res=await fetch(`${API_BASE}/get_state.php`,{cache:'no-store'}); if(!res.ok) throw 0; const st=await res.json(); return st&&st.rows?st:null; }catch{return null} }
+
+    async function pushUpdate(rowIndex, field, value){ const st=getLocalState()||blankState(); if(String(rowIndex).startsWith('r')){ const i=Number(String(rowIndex).slice(1)); st.r=st.r||[]; while(st.r.length<=i) st.r.push({}); st.r[i][field]=value; } else if(rowIndex==='-1'){ st[field]=value; } else { const idx=Number(rowIndex); while((st.rows||[]).length<=idx){ st.rows.push({status:'',funk:'',driver:'',pax1:'',pax2:'',pax3:''}); } st.rows[idx][field]=value; } st.lastUpdated=Date.now(); setLocalState(st); try{ await fetch(`${API_BASE}/update_state.php`, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ rowIndex, field, value })}); }catch{} }
+
+    function updateTopOfficer(){
+      // Höchstrangiger Officer = niedrigste PD-Nummer, PD-00 und PA werden ignoriert
+      const allSel = Array.from(document.querySelectorAll('select.dienstnummer'));
+      const codes = allSel.map(s=>s.value)
+        .filter(Boolean)
+        .filter(c=>/^PD-\d{2,3}$/.test(c))
+        .filter(c=>c !== 'PD-00');
+      const topEl = document.getElementById('topOfficer');
+      const timeEl = document.getElementById('updTime');
+      if (!codes.length){
+        topEl.textContent = '—';
+        timeEl.textContent = new Date().toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit'});
+        return;
+      }
+      const min = codes.sort((a,b)=>Number(a.split('-')[1])-Number(b.split('-')[1]))[0];
+      topEl.textContent = min;
+      timeEl.textContent = new Date().toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit'});
+    }
+
+    function initSelectOptions(){ document.querySelectorAll('select.dienstnummer').forEach(sel=>{ sel.innerHTML = buildOptionsHTML(); }); }
+
+    async function init(){ initSelectOptions(); attachNameLogic(); const server=await fetchServerState(); if(server){ setLocalState(server); applyState(server);} else { const local=getLocalState()||blankState(); setLocalState(local); applyState(local);} setInterval(async()=>{ const st=await fetchServerState(); if(!st) return; const local=getLocalState(); if(!local || st.lastUpdated>(local.lastUpdated||0)){ setLocalState(st); applyState(st);} }, POLL_MS); }
+
     init();
   </script>
 </body>
